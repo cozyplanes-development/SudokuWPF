@@ -22,8 +22,8 @@ namespace SudokuWPF.Generator
 			}
 		}
 
-		// Sudoku Board 의 Constructor
-		public SudokuGenerator()
+		// Constructor of Sudoku Board
+		public GameGenerator()
 		{
 			Board = new int[BOARD_WIDTH, BOARD_HEIGHT];
 		}
@@ -44,14 +44,15 @@ namespace SudokuWPF.Generator
 			int nextY = y;
 			int[] forCheck = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 			Random random = new Random();
-			int temp = 0;
-			int current = 0;
+			//int temp = 0;
+			//int current = 0;
 			int top = forCheck.Length;
 			
 			for (int i = 0; i < forCheck.Length; i++)
 			{
 				if (legalMove(x, y, forCheck[i]))
 				{
+					Board[x, y] = forCheck[i];
 					if (x == 8)
 					{
 						if (y == 8)
@@ -77,9 +78,6 @@ namespace SudokuWPF.Generator
 					}
 				}
 			}
-
-			Board[x, y] = 0;
-			return false;
 
 			Board[x, y] = 0;
 			return false;

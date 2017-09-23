@@ -12,16 +12,16 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
-            <ComboBox Margin="5" ItemsSource="{Binding LstDificultad}" SelectedItem="{Binding SelectedDificultad}"></ComboBox>
-            <Button Margin="5" Command="{Binding ClickNuevoJuegoCommand}">Generate</Button>
-                <Button Margin="5" Command="{Binding ClickPistaCommand}">Show 1 hint</Button>
-            <Button Margin="5" Command="{Binding ClickResolverCommand}">Show Solution</Button> 
+            <ComboBox Margin="5" ItemsSource="{Binding difficultyList}" SelectedItem="{Binding SelectedDifficulty}"></ComboBox>
+            <Button Margin="5" Command="{Binding ClickNewGameCommand}">Generate</Button>
+                <Button Margin="5" Command="{Binding ClickHintCommand}">Show hint</Button>
+            <Button Margin="5" Command="{Binding ClickSolutionCommand}">Show Solution</Button> 
         </StackPanel>
         <Grid Grid.Row="1">
             <ItemsControl ItemsSource="{Binding Celdas}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <TextBox Text="{Binding Texto, UpdateSourceTrigger = PropertyChanged}" Background="{Binding Background}" FontSize="18.667" IsReadOnly="{Binding IsFixed}" FontWeight="Bold" TextAlignment="Center"></TextBox>
+                        <TextBox Text="{Binding Text, UpdateSourceTrigger = PropertyChanged}" Background="{Binding Background}" FontSize="18.667" IsReadOnly="{Binding IsFixed}" FontWeight="Bold" TextAlignment="Center"></TextBox>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
                 <ItemsControl.ItemsPanel>
