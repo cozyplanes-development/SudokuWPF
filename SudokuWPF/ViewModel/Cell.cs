@@ -4,8 +4,7 @@ using System.Windows.Media;
 
 namespace SudokuWPF.ViewModel
 {
-    class Cell : INotifyPropertyChanged
-	// INotifyPropertyChanged : Notifies clients that a property value has changed.
+    class Cell : INotifyPropertyChanged // INotifyPropertyChanged : Notifies clients that a property value has changed.
 	{
 		string text = string.Empty;
         int row;

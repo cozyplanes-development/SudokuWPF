@@ -18,7 +18,7 @@
             <Button Margin="5" Command="{Binding ClickSolutionCommand}">Show Solution</Button> 
         </StackPanel>
         <Grid Grid.Row="1">
-            <ItemsControl ItemsSource="{Binding Celdas}">
+            <ItemsControl ItemsSource="{Binding Cells}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <TextBox Text="{Binding Text, UpdateSourceTrigger = PropertyChanged}" Background="{Binding Background}" FontSize="18.667" IsReadOnly="{Binding IsFixed}" FontWeight="Bold" TextAlignment="Center"></TextBox>

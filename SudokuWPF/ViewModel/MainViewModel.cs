@@ -48,7 +48,7 @@ namespace SudokuWPF.ViewModel
 				generate.nextBoard(numHoles);
                 BoardInitial = generate.Board;
                 BoardSolved = (int[,])generate.Board.Clone();
-                SudokuSolver ssolver = new SudokuSolver(9, BoardSolved);
+                GameSolver ssolver = new GameSolver(9, BoardSolved);
                 solved = ssolver.solveSudoku(BoardSolved);
             }
             while (!solved);
